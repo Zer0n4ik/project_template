@@ -26,17 +26,17 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('project_template') {
-                	sh 'docker build -tl semaev/toolbox:latest . '
+                	sh 'docker build . '
                 }
             }
         }
-        stage("docker push") {
-            steps {
-                echo " ============== start pushing image =================="
-                sh '''
-                docker push semaev/toolbox:latest
-                '''
-            }
-        }
+        //stage("docker push") {
+          //  steps {
+           //     echo " ============== start pushing image =================="
+           //     sh '''
+             //   do
+               // '''
+      //      }
+       // }
     }
 }
